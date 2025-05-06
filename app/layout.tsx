@@ -16,8 +16,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-white text-gray-900">
-        <header className="sticky top-0 z-50 bg-white shadow-sm">
+      <body className="bg-[var(--background)] text-[var(--foreground)]">
+        <header className="sticky top-0 z-50 bg-[var(--surface)] shadow-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-3">
               <Image
@@ -26,31 +26,40 @@ export default function RootLayout({
                 width={40}
                 height={40}
               />
-              <span className="text-xl font-bold text-[#0f52ba]">
-                Harmonic<span className="text-[#ffa500]">Hash.io</span>
+              <span className="text-xl font-bold text-[var(--primary)]">
+                Harmonic<span className="text-[var(--accent)]">Hash.io</span>
               </span>
             </Link>
 
             <nav className="hidden md:flex space-x-6 font-medium">
-              <Link href="#" className="text-[#0f52ba] hover:text-[#0d47a1]">
+              <Link
+                href="#"
+                className="text-[var(--primary)] hover:text-[var(--primary-dark)]"
+              >
                 Chord Library
               </Link>
-              <Link href="#" className="text-[#0f52ba] hover:text-[#0d47a1]">
+              <Link
+                href="#"
+                className="text-[var(--primary)] hover:text-[var(--primary-dark)]"
+              >
                 Sequencer
               </Link>
-              <Link href="#" className="text-[#0f52ba] hover:text-[#0d47a1]">
+              <Link
+                href="#"
+                className="text-[var(--primary)] hover:text-[var(--primary-dark)]"
+              >
                 About
               </Link>
               <Link
                 href="#"
-                className="bg-[#0f52ba] text-white px-4 py-2 rounded-md hover:bg-[#0d47a1] transition"
+                className="bg-[var(--primary)] text-white px-4 py-2 rounded-md hover:bg-[var(--primary-dark)] transition"
               >
                 Get Started
               </Link>
             </nav>
 
             <button
-              className="md:hidden text-gray-600 hover:text-[#0f52ba]"
+              className="md:hidden text-[var(--text-muted)] hover:text-[var(--primary)]"
               aria-label="Toggle menu"
             >
               <svg
@@ -72,7 +81,7 @@ export default function RootLayout({
 
         <main>{children}</main>
 
-        <footer className="bg-[#0f52ba] text-white py-12 mt-20">
+        <footer className="bg-[var(--primary)] text-white py-12 mt-20">
           <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-sm">
             <div>
               <div className="flex items-center mb-4">
@@ -84,7 +93,7 @@ export default function RootLayout({
                   className="mr-2"
                 />
                 <span className="font-bold text-lg">
-                  Harmonic<span className="text-[#ffa500]">Hash.io</span>
+                  Harmonic<span className="text-[var(--accent)]">Hash.io</span>
                 </span>
               </div>
               <p className="text-gray-300 max-w-xs">
