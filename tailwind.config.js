@@ -1,8 +1,6 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx}", // this is essential for App Router
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
@@ -10,15 +8,15 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        surface: "var(--surface)",
+        "surface-alt": "var(--surface-alt)",
         primary: "var(--primary)",
         "primary-dark": "var(--primary-dark)",
         accent: "var(--accent)",
         muted: "var(--text-muted)",
-        surface: "var(--surface)",
-        "surface-alt": "var(--surface-alt)",
       },
     },
   },
-  darkMode: "media", // or 'class' if you want toggle control
+  darkMode: "media",
   plugins: [],
 };
