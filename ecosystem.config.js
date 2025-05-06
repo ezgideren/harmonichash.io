@@ -4,7 +4,7 @@ module.exports = {
       name: "app",
       script: "npm",
       args: "start",
-      cwd: "/var/www/app",
+      cwd: "/var/www/",
       watch: true,
       env: {
         NODE_ENV: "production",
