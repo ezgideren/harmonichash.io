@@ -9,7 +9,7 @@ module.exports = {
         exec_mode: "cluster",
         watch: false,
         env: {
-          PORT: 3001,
+          PORT: 3000,
           NODE_ENV: "production",
         },
       },
